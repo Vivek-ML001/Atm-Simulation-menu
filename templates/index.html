@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ATM System</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to the ATM</h1>
+    <form action="/create_pin" method="POST">
+      <input type="password" name="pin" placeholder="Enter 4-digit PIN" required>
+      <button type="submit">Create PIN</button>
+    </form>
+    <p>{{ message }}</p>
+  </div>
+</body>
+</html>

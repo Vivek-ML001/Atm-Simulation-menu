@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ATM Simulation Menu</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>ATM Simulation Menu</h2>
+    <form action="/deposit" method="POST">
+      <input type="password" name="pin" placeholder="Enter PIN" required>
+      <input type="number" name="amount" placeholder="Deposit Amount" required>
+      <button type="submit">Deposit</button>
+    </form>
+
+    <form action="/withdraw" method="POST"> 
+      <input type="password" name="pin" placeholder="Enter PIN" required>
+      <input type="number" name="amount" placeholder="Withdraw Amount" required>
+      <button type="submit">Withdraw</button>
+    </form>
+
+    <form action="/check_balance" method="POST">
+      <input type="password" name="pin" placeholder="Enter PIN" required>
+      <button type="submit">Check Balance</button>
+    </form>
+
+    <p>{{ message }}</p>
+  </div>
+</body>
+</html>
